@@ -324,32 +324,37 @@
   
 
 
-        
-            <section id="comments" class="comments">
-              <style>
-                .comments{margin:30px;padding:10px;background:#fff}
-                @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-              </style>
-              <div id="vcomment" class="comment"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
 <script>
-    var notify = 'false' == true ? true : false;
-    var verify = 'false' == true ? true : false;
-    new Valine({
-        av: AV,
-        el: '#vcomment',
-        notify: notify,
-        app_id: 'dH0JOSk3xs8detD41xfzWY5o-gzGzoHsz',
-        app_key: 'cdKnCrEXgBaILdTBgtaE6mXw',
-        placeholder: "",
-        avatar:"mm",
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "dH0JOSk3xs8detD41xfzWY5o-gzGzoHsz",
+            app_key: "cdKnCrEXgBaILdTBgtaE6mXw",
+            placeholder: "友情提醒，留下正确的邮箱地址可以第一时间获取评论反馈",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: "10"
     });
 </script>
-          </section>
-        
 
+
+    </section>
+  
 
           </div>
         </div>
