@@ -3,6 +3,7 @@
 /*《分类页面，标签页面样式*/
 /*标题*/
 .category-count {
+	color:#4d4d4d;
 	text-align:center;
 	line-height:3;
 	font-size:18px;
