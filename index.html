@@ -434,7 +434,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">335字</span>
+        <span class="post-count">810字</span>
       </span>
     </span>
 
@@ -443,7 +443,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -457,8 +457,7 @@
 
     <div class="article-entry" itemprop="articleBody">
         
-            <h1 id="1-有序数组的-Two-Sum"><a href="#1-有序数组的-Two-Sum" class="headerlink" title="1. 有序数组的 Two Sum"></a>1. 有序数组的 Two Sum</h1><ol start="167">
-<li><p>Two Sum II - Input array is sorted (Easy)</p>
+            <h1 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h1><h2 id="有序数组的-Two-Sum"><a href="#有序数组的-Two-Sum" class="headerlink" title="有序数组的 Two Sum"></a>有序数组的 Two Sum</h2><p>167.Two Sum II - Input array is sorted (Easy)</p>
 <p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
 <p>说明:</p>
 <ul>
@@ -467,17 +466,7 @@
 </ul>
 <p><strong>示例:</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numbers = [2, 7, 11, 15], target = 9</span><br><span class="line">输出: [1,2]</span><br><span class="line">解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">解题思路：使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向/较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">          <span class="keyword">if</span> (numbers == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> j = numbers.length - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">                <span class="keyword">if</span>((numbers[i]+numbers[j])==target)</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i+<span class="number">1</span>,j+<span class="number">1</span>&#125;;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span>((numbers[i]+numbers[j])&gt;target)</span><br><span class="line">                     j--;                                    </span><br><span class="line">                     <span class="keyword">else</span> </span><br><span class="line">                     i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//数组中的元素最多遍历一次，时间复杂度为 O(N)。只使用了两个额外变量，空间复杂度为 O(1)。</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
+            
         
 
         
@@ -635,19 +624,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">刷题记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java基础</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">java内部类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">刷题记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
               </li>
             
             <div class="clearfix"></div>
