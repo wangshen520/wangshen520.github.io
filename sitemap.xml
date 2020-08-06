@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/08/06/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2020-08-06T07:42:22.654Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/05/03/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2020-05-03T14:13:13.625Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/04/30/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM/</loc>
     
-    <lastmod>2020-05-02T10:30:46.567Z</lastmod>
+    <lastmod>2020-05-03T06:03:07.228Z</lastmod>
     
   </url>
   

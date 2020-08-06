@@ -22,6 +22,7 @@
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebvc2hts6j31820s01kx.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebvg8p7qij31cg0e0440.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebvr7au89j316o0u0n6k.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gef7itovgmj317i0d2n4t.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebzpeecfej31440u0ter.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebzwiylwbj30zk0f4juj.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebzxfk7g9j30yy0c6n1r.jpg">
@@ -56,7 +57,7 @@
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee8zpljvcj30el0ekt9h.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee93nwby1j317i0qck00.jpg">
 <meta property="article:published_time" content="2020-04-30T01:19:53.000Z">
-<meta property="article:modified_time" content="2020-05-02T10:30:46.567Z">
+<meta property="article:modified_time" content="2020-05-03T06:03:07.228Z">
 <meta property="article:author" content="wangshen">
 <meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
@@ -222,7 +223,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">6,675字</span>
+        <span class="post-count">6,646字</span>
       </span>
     </span>
 
@@ -231,7 +232,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">24分</span>
+        <span class="post-count">23分</span>
       </span>
     </span>
 </div>
@@ -268,9 +269,10 @@
 <h3 id="虚拟机栈"><a href="#虚拟机栈" class="headerlink" title="虚拟机栈"></a>虚拟机栈</h3><p>虚拟机栈描述的是Java方法执行的动态内存模型。</p>
 <p><strong>栈帧</strong>： 每个方法执行都要创建一个栈帧，方法执行完毕，栈帧销毁。用于存储局部变量表，操作数栈，动态链接，方法出口等。<br><strong>局部变量表</strong>：存放编译期可知的各种基本数据类型，引用类型，局部变量表的大小在编译期便已经可以确定，在运行时期不会发生改变。<br><strong>栈的大小</strong>：如果栈满了，StackOverFlowError，递归调用很常见。</p>
 <h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>本地方法栈为虚拟机执行native方法服务</p>
-<h3 id="方法区-永久代"><a href="#方法区-永久代" class="headerlink" title="方法区(永久代)"></a>方法区(永久代)</h3><p>存储虚拟机加载的类信息（类的版本、字段、方法、接口），常量，静态常量，即时编译后的代码等数据，也可能会抛出OutOfMemoryError异常。<br><strong>方法区与永久代</strong>实际并不等价，对于HotSpot中才有永久代的概念。在java8中，<strong>永久代已经被移除，被一个称为“元数据区”(元空间)的区域所取</strong>。元空间的本质与永久代类似，元空间与永久代最大的区别在于：<strong>元空间并不在虚拟机中，而是使用本地内存</strong>。因此，默认情况下，元空间的大小仅受内存限。<strong>类的元数据放入native memory，字符串池和类的静态变量放入java堆中</strong>，这样可以加载多少类的元数据就不再由MaxPermSize控制，而由系统的实际使用空间来控制。</p>
+<h3 id="方法区-永久代"><a href="#方法区-永久代" class="headerlink" title="方法区(永久代)"></a>方法区(永久代)</h3><p>存储虚拟机加载的类信息（类的版本、字段、方法、接口），常量，静态变量，即时编译后的代码等数据，也可能会抛出OutOfMemoryError异常。<br><strong>方法区与永久代</strong>实际并不等价，对于HotSpot中才有永久代的概念。在java8中，<strong>永久代已经被移除，被一个称为“元数据区”(元空间)的区域所取</strong>。元空间的本质与永久代类似，元空间与永久代最大的区别在于：<strong>元空间并不在虚拟机中，而是使用本地内存</strong>。因此，默认情况下，元空间的大小仅受内存限。<strong>类的元数据放入native memory，字符串池和类的静态变量放入java堆中</strong>，这样可以加载多少类的元数据就不再由MaxPermSize控制，而由系统的实际使用空间来控制。</p>
 <h4 id="运行时常量池"><a href="#运行时常量池" class="headerlink" title="运行时常量池"></a>运行时常量池</h4><p>每一个运行时常量池都在java虚拟机的<strong>方法区</strong>中分配。</p>
-<h3 id="java堆"><a href="#java堆" class="headerlink" title="java堆"></a>java堆</h3><p>是被线程共享的内存区域，创建的对象和数组都保存在java堆内存中，也是垃圾收集器进行垃圾收集的最重要的内存区域。由于现代VM采用<strong>分代收集算法</strong>，因此java堆从GC角度还可以细分为：<strong>新生代</strong>(Eden区、From Survivor区和To Survivor区)和<strong>老年代</strong>，如下：![截屏2020-04-30 下午6.42.36](/Users/wangshen/Library/Application Support/typora-user-images/截屏2020-04-30 下午6.42.36.png)</p>
+<h3 id="java堆"><a href="#java堆" class="headerlink" title="java堆"></a>java堆</h3><p>是被线程共享的内存区域，创建的对象和数组都保存在java堆内存中，也是垃圾收集器进行垃圾收集的最重要的内存区域。由于现代VM采用<strong>分代收集算法</strong>，因此java堆从GC角度还可以细分为：<strong>新生代</strong>(Eden区、From Survivor区和To Survivor区)和<strong>老年代</strong>，如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gef7itovgmj317i0d2n4t.jpg" alt="截屏2020-05-03 下午1.40.15"></p>
 <h4 id="新生代"><a href="#新生代" class="headerlink" title="新生代"></a>新生代</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebzpeecfej31440u0ter.jpg" alt="截屏2020-04-30 下午6.53.28"></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebzwiylwbj30zk0f4juj.jpg" alt="截屏2020-04-30 下午7.00.25"></p>
 <h4 id="老年代"><a href="#老年代" class="headerlink" title="老年代"></a>老年代</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gebzxfk7g9j30yy0c6n1r.jpg" alt="截屏2020-04-30 下午7.01.17"></p>
@@ -527,6 +529,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/05/03/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java并发编程
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/04/07/Java%E5%86%85%E9%83%A8%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Java内部类</div>
@@ -705,11 +716,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">java内部类</a>
+                <a href="javascript:void(0)" class="js-tag color4">java并发编程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">刷题记录</a>
+                <a href="javascript:void(0)" class="js-tag color3">java内部类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -718,6 +729,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">jvm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">刷题记录</a>
               </li>
             
             <div class="clearfix"></div>
