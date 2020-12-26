@@ -11,15 +11,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Anaconda使用教程 | It&#39;s a blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用操作命令 查看当前软件版本&#x2F;更新当前版本  1conda --version  1conda update conda   查看conda帮助信息  1conda --help   创建python环境  1conda create -n your_env_name python&#x3D;X.X  注：默认的情况下只安装了一些必备的包，并不会像我们安装conda那样自动安装许多常用的包。要实现上面的功">
+  <meta name="description" content="常用操作命令1.查看当前软件版本&#x2F;更新当前版本 12conda --versionconda update conda    2.查看conda帮助信息 1conda --help    3.创建python环境 1conda create -n your_env_name python&#x3D;X.X  注：默认的情况下只安装了一些必备的包，并不会像我们安装conda那样自动安装许多常用的包。要实现上面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Anaconda使用教程">
 <meta property="og:url" content="http://yoursite.com/2020/09/30/Anaconda%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="It&#39;s a blog">
-<meta property="og:description" content="常用操作命令 查看当前软件版本&#x2F;更新当前版本  1conda --version  1conda update conda   查看conda帮助信息  1conda --help   创建python环境  1conda create -n your_env_name python&#x3D;X.X  注：默认的情况下只安装了一些必备的包，并不会像我们安装conda那样自动安装许多常用的包。要实现上面的功">
+<meta property="og:description" content="常用操作命令1.查看当前软件版本&#x2F;更新当前版本 12conda --versionconda update conda    2.查看conda帮助信息 1conda --help    3.创建python环境 1conda create -n your_env_name python&#x3D;X.X  注：默认的情况下只安装了一些必备的包，并不会像我们安装conda那样自动安装许多常用的包。要实现上面">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-30T03:24:08.000Z">
-<meta property="article:modified_time" content="2020-12-26T02:24:41.763Z">
+<meta property="article:modified_time" content="2020-12-26T02:32:04.684Z">
 <meta property="article:author" content="wangshen">
 <meta property="article:tag" content="anaconda常用命令">
 <meta name="twitter:card" content="summary">
@@ -207,59 +207,53 @@
 
     <div class="article-entry" itemprop="articleBody">
         
-            <h1 id="常用操作命令"><a href="#常用操作命令" class="headerlink" title="常用操作命令"></a>常用操作命令</h1><ol>
-<li>查看当前软件版本/更新当前版本</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure>
+            <h1 id="常用操作命令"><a href="#常用操作命令" class="headerlink" title="常用操作命令"></a>常用操作命令</h1><p>1.查看当前软件版本/更新当前版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br><span class="line">conda update conda</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda update conda</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>查看conda帮助信息</li>
-</ol>
+
+<p>2.查看conda帮助信息</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --help</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
-<li>创建python环境</li>
-</ol>
+
+
+<p>3.创建python环境</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n your_env_name python=X.X</span><br></pre></td></tr></table></figure>
 
 <p>注：默认的情况下只安装了一些必备的包，并不会像我们安装conda那样自动安装许多常用的包。要实现上面的功能，则必须在末尾加上anaconda，完整命令是：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n your_env_name python=X.X anaconda</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li>激活(或者切换不同的python版本)使用的环境</li>
-</ol>
+
+
+<p>4.激活(或者切换不同的python版本)使用的环境</p>
 <p>打开命令行输入python –version可以检查当前python的版本。</p>
 <p>使用如下命令即可 激活你的虚拟环境(即将python的版本改变)。</p>
 <p>linux命令如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source activate your_env_name</span><br></pre></td></tr></table></figure>
 
-<ol start="5">
-<li>关闭虚拟环境（即从当前环境退出返回path环境中默认使用的环境）</li>
-</ol>
+
+
+<p>5.关闭虚拟环境（即从当前环境退出返回path环境中默认使用的环境）</p>
 <p>linux命令如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source deactivate</span><br></pre></td></tr></table></figure>
 
-<ol start="6">
-<li>删除虚拟环境</li>
-</ol>
+
+
+<p>6.删除虚拟环境</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -n your_env_name(虚拟环境名称) --all</span><br></pre></td></tr></table></figure>
 
-<ol start="7">
-<li>对虚拟环境中安装额外的包</li>
-</ol>
+
+
+<p>7.对虚拟环境中安装额外的包</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -n your_env_name [package]</span><br></pre></td></tr></table></figure>
 
 <p>即可安装package到your_env_name中</p>
-<ol start="8">
-<li>删除虚拟环境中的某个包</li>
-</ol>
+<p>8.删除虚拟环境中的某个包</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove --name your_env_name package_name</span><br></pre></td></tr></table></figure>
 
-<ol start="9">
-<li>查看conda中安装了哪些包(conda中的安装的包并不等于环境中安装的包)</li>
-</ol>
+
+
+<p>9.查看conda中安装了哪些包(conda中的安装的包并不等于环境中安装的包)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure>
 
 
@@ -542,11 +536,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">java并发编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">刷题记录</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">java并发编程</a>
+                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,14 +557,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">李宏毅</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
             
             <div class="clearfix"></div>
